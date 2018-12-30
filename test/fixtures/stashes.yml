@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  squirrel: one
+  snack: one
+
+two:
+  squirrel: two
+  snack: two
