@@ -1,2 +1,23 @@
-<h1>Squirrels#show</h1>
-<p>Find me in app/views/squirrels/show.html.erb</p>
+<h1><%= @squirrel.name %></h1>
+<p><%= @squirrel.bio %></p>
+
+<%= image_tag(@squirrel.avatar.img_url, alt: @squirrel.name) %>
+
+<% if @squirrel.stashes.count < 1 %>
+    <h3><%= @squirrel.name %> has no hidden stashes at the moment. ☹️ </h3> 
+<% else %>
+    <h3>Hidden Stashes:</h3>
+    <ul>
+        <% @squirrel.stashes.each do |stash| %>
+            <li>
+              <h4><%= stash.name%></h4>
+                <p>Snack: <%= "#{stash.snack.name} (#{stash.snack.description})" %></p>
+            </li>
+        <% end %>
+    </ul>
+<% end %>
+<%= link_to "Back to Squirrels", squirrels_path %> 
+
+
+
+

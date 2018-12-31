@@ -4,12 +4,9 @@ Snack.destroy_all
 Stash.destroy_all 
 
 
-
-
 avatar1 = Avatar.create(img_url: "https://i0.wp.com/anchor.hope.edu/wp-content/uploads/2016/10/squirrel.jpg")
 avatar2 = Avatar.create(img_url: "https://i.pinimg.com/originals/ab/2e/6b/ab2e6b37c93ca5fc4af0037eca066e37.jpg")
 avatar3 = Avatar.create(img_url: "https://is3-ssl.mzstatic.com/image/thumb/Purple7/v4/7e/36/e2/7e36e214-b812-9239-a4d7-bfb38566ac28/source/256x256bb.jpg")
-
 
 
 squirrel1 = Squirrel.create(name: "Mr. Bubbles", bio:"He is a very nice Squirrel", avatar_id: Avatar.all.sample.id)

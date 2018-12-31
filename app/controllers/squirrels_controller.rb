@@ -1,8 +1,10 @@
 class SquirrelsController < ApplicationController
   def index
+    @squirrels = Squirrel.all 
   end
 
   def show
+    @squirrel = Squirrel.find(params[:id])
   end
 
   def new
