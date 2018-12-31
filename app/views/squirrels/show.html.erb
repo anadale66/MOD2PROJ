@@ -16,6 +16,8 @@
         <% end %>
     </ul>
 <% end %>
+
+<%= button_to "EDIT #{@squirrel.name}", edit_squirrel_path(@squirrel), method: :get %>
 <%= link_to "Back to Squirrels", squirrels_path %> 
 
 

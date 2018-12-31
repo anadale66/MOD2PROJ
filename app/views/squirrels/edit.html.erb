@@ -1,2 +1,15 @@
-<h1>Squirrels#edit</h1>
-<p>Find me in app/views/squirrels/edit.html.erb</p>
+<h1>Edit your squirrel</h1>
+
+
+<%= form_for @squirrel do |f|%>
+<%= f.label "Squirrel Name" %>
+<%= f.text_field :name, placeholder: "Enter Name" %>
+<%= f.label "Bio" %>
+<%= f.text_area :bio, placeholder: "Write the bio" %>
+<%= f.label "Avatar" %>
+<%= f.collection_select :avatar_id, Avatar.all, :id, :img_url %>
+<%= f.submit %>
+<% end %>
+
+
+<%= link_to "Back to Squirrels", squirrels_path %> 

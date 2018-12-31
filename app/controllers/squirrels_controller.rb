@@ -13,14 +13,21 @@ class SquirrelsController < ApplicationController
 
   def create
     @squirrel = Squirrel.create(squirrel_params) 
-        
+
+    flash[:notice] = "Squirrel created!"    
     redirect_to @squirrel
   end
 
   def edit
+    @squirrel = Squirrel.find(params[:id])
   end
 
   def update
+    @squirrel = Squirrel.find(params[:id])
+    @squirrel.update(squirrel_params)
+
+    flash[:notice] = "Squirrel updated!"
+    redirect_to @squirrel 
   end
 
   def delete
