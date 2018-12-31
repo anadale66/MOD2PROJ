@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: "squirrels#index"
+  root to: "pages#welcome"
   resources :avatars
   resources :stashes
   resources :snacks, only: [:index, :show]
