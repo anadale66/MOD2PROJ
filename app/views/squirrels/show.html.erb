@@ -10,13 +10,14 @@
     <ul>
         <% @squirrel.stashes.each do |stash| %>
             <li>
-              <h4><%= stash.name%></h4>
+              <h4><%= link_to stash.name, stash_path(stash)%></h4>
                 <p>Snack: <%= "#{stash.snack.name} (#{stash.snack.description})" %></p>
             </li>
         <% end %>
     </ul>
 <% end %>
 
+<%= button_to "Add Stash", new_stash_path, method: :get %>
 <%= button_to "Edit #{@squirrel.name}", edit_squirrel_path(@squirrel), method: :get %>
 <%= button_to "Delete #{@squirrel.name}", squirrel_path(@squirrel), method: :delete  %>
 <%= link_to "Back to Squirrels", squirrels_path %> 

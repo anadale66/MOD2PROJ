@@ -1,0 +1,10 @@
+<h1><%= @stash.name %></h1>
+<h3>Stash contains: <%= @stash.snack.name %></h3>
+<p>Description: <%= @stash.snack.description %></p>
+<h4>Owned by: <%= link_to @stash.squirrel.name, squirrel_path(@stash.squirrel) %></h4>
+
+
+
+<%= button_to "Edit #{@stash.name}", edit_stash_path(@stash), method: :get %>
+<%= button_to "Delete #{@stash.name}", stash_path(@stash), method: :delete  %>
+<%= link_to "Back to Stashes", stashes_path %> 
