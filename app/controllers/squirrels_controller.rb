@@ -30,7 +30,12 @@ class SquirrelsController < ApplicationController
     redirect_to @squirrel 
   end
 
-  def delete
+  def destroy
+    @squirrel = Squirrel.find(params[:id])
+    @squirrel.destroy 
+    
+    flash[:notice] = "#{@squirrel.name} Deleted!"
+    redirect_to squirrels_path 
   end
 
   private 
