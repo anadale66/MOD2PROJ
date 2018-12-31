@@ -10,14 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_30_224807) do
+ActiveRecord::Schema.define(version: 2018_12_31_220134) do
 
   create_table "avatars", force: :cascade do |t|
     t.integer "squirrel_id"
     t.string "img_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
     t.index ["squirrel_id"], name: "index_avatars_on_squirrel_id"
+  end
+
+  create_table "sessions", force: :cascade do |t|
+    t.string "username"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "snacks", force: :cascade do |t|
