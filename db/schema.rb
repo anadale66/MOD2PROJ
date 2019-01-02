@@ -21,12 +21,6 @@ ActiveRecord::Schema.define(version: 2018_12_31_220134) do
     t.index ["squirrel_id"], name: "index_avatars_on_squirrel_id"
   end
 
-  create_table "sessions", force: :cascade do |t|
-    t.string "username"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "snacks", force: :cascade do |t|
     t.string "name"
     t.string "description"
