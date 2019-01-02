@@ -1,6 +1,6 @@
 <h1>Stashes</h1>
 
-<ul>
+<ul class="zero-padding">
     <% @stashes.each do |stash| %>
         <li>
             <h4><%= link_to stash.name, stash_path(stash) %></h4>
@@ -8,4 +8,4 @@
      <% end %>
 </ul> 
 
-<h4><%= link_to("Create New Stash", {controller: :stashes, action: :new}) %></h4>
+<h4><%= link_to("Create New Stash", {controller: :stashes, action: :new}, class: "btn btn-info") %></h4>
