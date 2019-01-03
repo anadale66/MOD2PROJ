@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_31_220134) do
+ActiveRecord::Schema.define(version: 2019_01_03_053926) do
 
   create_table "avatars", force: :cascade do |t|
     t.integer "squirrel_id"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 2018_12_31_220134) do
     t.integer "snack_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "img_url"
     t.index ["snack_id"], name: "index_stashes_on_snack_id"
     t.index ["squirrel_id"], name: "index_stashes_on_squirrel_id"
   end

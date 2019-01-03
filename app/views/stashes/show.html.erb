@@ -1,4 +1,5 @@
 <h1><%= @stash.name %></h1>
+<h1><%= image_tag(@stash.img_url)%></h1>
 <h3>Stash contains: <%= @stash.snack.name %></h3>
 <p>Description: <%= @stash.snack.description %></p>
 <h4>Owned by: <%= link_to @stash.squirrel.name, squirrel_path(@stash.squirrel) %></h4>
