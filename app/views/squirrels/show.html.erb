@@ -17,9 +17,12 @@
     </ul>
 <% end %>
 
-<%= button_to "Add Stash", new_stash_path, method: :get %>
-<%= button_to "Edit #{@squirrel.name}", edit_squirrel_path(@squirrel), method: :get %>
+<%= button_to "Add Stash", new_stash_path, method: :get, class:"btn btn-success"%>
+<br>
+<%= button_to "Edit #{@squirrel.name}", edit_squirrel_path(@squirrel), method: :get, class:"btn btn-success" %>
+<br>
 <%= button_to "Delete #{@squirrel.name}", squirrel_path(@squirrel), method: :delete, class: "btn btn-danger" %>
+<br>
 <%= link_to "Back to Squirrels", squirrels_path, class: "back-link" %>
 
 
