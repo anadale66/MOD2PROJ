@@ -1,13 +1,13 @@
-<h1>Squirrels</h1>
+<h1>🌈 Squirrel Friends</h1>
 
 <ul class="squirrel-list row">
     <% @squirrels.each do |squirrel| %>
         <li class="col-2">
             <%= link_to image_tag(squirrel.avatar.img_url), squirrel_path(squirrel) %>
             <br>
-            <h5><%= link_to squirrel.name, squirrel_path(squirrel) %></h5>
+            <h5><%= squirrel.name %></h5>
         </li>
      <% end %>
 </ul>
 
-<h4><%= link_to("Create New Squirrel", {controller: :squirrels, action: :new}, class: "btn btn-info") %></h4>
+<h4><%= link_to("Squirrel Signup", {controller: :squirrels, action: :new}, class: "btn btn-info") %></h4>

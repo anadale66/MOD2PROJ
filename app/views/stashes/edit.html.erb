@@ -1,12 +1,12 @@
-<h1>Edit Stash</h1>
+<h1>🧺 Edit Stash</h1>
 
 
 <%= form_for @stash do |f|%>
-<%= f.label "Stash Name" %>
+<b><%= f.label "Stash Name" %></b>
 <%= f.text_field :name, placeholder: "Enter Name" %>
-<%= f.label "Squirrel" %>
+<b><%= f.label "Squirrel" %></b>
 <%= f.collection_select :squirrel_id, Squirrel.all, :id, :name %>
-<%= f.label "Snack" %>
+<b><%= f.label "Snack" %> </b>
 <%= f.collection_select :snack_id, Snack.all, :id, :name %>
 <%= f.submit %>
 <% end %>

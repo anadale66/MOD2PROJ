@@ -1,20 +1,20 @@
-<h1>Create a new squirrel</h1>
+<h1>🌈 Signup</h1>
 
 
 <%= form_for @squirrel do |f|%>
     <div class="form-group">
-        <%= f.label "Squirrel Name" %>
+         <b><%= f.label "Squirrel Name" %></b>
         <%= f.text_field :name, placeholder: "Enter Name",  class: "form-control" %>
     </div>
     <div class="form-group">
-        <%= f.label "Bio" %>
+        <b><%= f.label "Bio" %></b>
         <%= f.text_area :bio, placeholder: "Write the bio", class: "form-control"%>
     </div>
     <div class="form-group">
-        <%= f.label "Avatar" %>
+        <b><%= f.label "Mood" %></b>
         <%= f.collection_select :avatar_id, Avatar.all, :id, :name %>
     </div>
-    <%= f.submit "Create yo squirrel", class: "btn btn-info" %>
+    <b><%= f.submit "Signup", class: "btn btn-info" %></b>
 <% end %>
 
 

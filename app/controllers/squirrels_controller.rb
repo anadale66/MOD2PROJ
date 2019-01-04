@@ -1,10 +1,14 @@
 class SquirrelsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @squirrels = Squirrel.all 
   end
 
   def show
     @squirrel = Squirrel.find(params[:id])
+    counts = @squirrel.stashes.map {|stash| stash.snack}
+    @count = counts.length 
   end
 
   def new

@@ -1,19 +1,23 @@
 
-<h1>Create a new Stash</h1>
+<h1>🧺 Create a new Stash</h1>
 
 
 <%= form_for @stash do |f| %>
     <div class="form-group">
-        <%= f.label "Stash Name" %>
+        <b><%= f.label "Stash Name" %></b>
         <%= f.text_field :name, placeholder: "Enter Name", class: "form-control" %>
     </div>
     <div class="form-group">
-        <%= f.label "Squirrel" %>
+        <b><%= f.label "Squirrel" %></b>
         <%= f.collection_select :squirrel_id, Squirrel.all, :id, :name %>
     </div>
     <div class="form-group">
-        <%= f.label "Snack" %>
+        <b><%= f.label "Snack" %></b>
         <%= f.collection_select :snack_id, Snack.all, :id, :name %>
+    </div>
+    <div class="form-group">
+        <b><%= f.label "Stash Location" %></b>
+        <%= f.collection_select :img_url, Stash.all, :id, :name %>
     </div>
     <%= f.submit "Create Stash", class: "btn btn-info" %>
 <% end %>

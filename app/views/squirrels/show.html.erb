@@ -3,15 +3,16 @@
 
 <%= image_tag(@squirrel.avatar.img_url, alt: @squirrel.name) %>
 
+
 <% if @squirrel.stashes.count < 1 %>
     <h3><%= @squirrel.name %> has no hidden stashes at the moment. ☹️ </h3> 
 <% else %>
-    <h3>Hidden Stashes:</h3>
+    <h3> Has <%=@count%> hidden Stashes:</h3>
     <ul class="zero-padding">
         <% @squirrel.stashes.each do |stash| %>
             <li>
               <h4><%= link_to stash.name, stash_path(stash)%></h4>
-                <p>Snack: <%= "#{stash.snack.name} (#{stash.snack.description})" %></p>
+                <p><%= "#{stash.snack.name} (#{stash.snack.description})" %></p>
             </li>
         <% end %>
     </ul>

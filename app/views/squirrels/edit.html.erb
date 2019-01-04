@@ -1,12 +1,12 @@
-<h1>Edit your squirrel</h1>
+<h1>🌈 Edit your squirrel</h1>
 
 
 <%= form_for @squirrel do |f|%>
-<%= f.label "Squirrel Name" %>
+<b><%= f.label "Squirrel Name" %></b>
 <%= f.text_field :name, placeholder: "Enter Name" %>
-<%= f.label "Bio" %>
+<b><%= f.label "Bio" %></b>
 <%= f.text_area :bio, placeholder: "Write the bio" %>
-<%= f.label "Avatar" %>
+<b><%= f.label "Mood" %></b>
 <%= f.collection_select :avatar_id, Avatar.all, :id, :name %>
 <%= f.submit %>
 <% end %>
