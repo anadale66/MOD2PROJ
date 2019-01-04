@@ -1,11 +1,14 @@
 <h1>🧺 Stashes</h1>
 
-<ul class="zero-padding">
+<ul class="squirrel-list row">
     <% @stashes.each do |stash| %>
-        <li>
-            <h5><%= link_to stash.name, stash_path(stash) %></h5>
+         <li class="col-2">
+            <%= link_to image_tag(stash.img_url), stash_path(stash) %>
+            <h6><%= stash.name %></h6>
         </li>
      <% end %>
 </ul> 
 
 <h5><%= link_to("Create New Stash", {controller: :stashes, action: :new}, class: "btn btn-info") %></h5>
+
+

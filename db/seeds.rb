@@ -9,7 +9,7 @@ avatar2 = Avatar.create(img_url: "https://i.pinimg.com/originals/ab/2e/6b/ab2e6b
 avatar3 = Avatar.create(img_url: "https://pbs.twimg.com/profile_images/2709896467/4cd02b4fc0ffaaeead6bceebb03a5e32.jpeg", name: "Lazy")
 avatar4 = Avatar.create(img_url: "https://pbs.twimg.com/profile_images/722593836317282305/jaOaM2z-_400x400.jpg", name: "Funny")
 avatar5 = Avatar.create(img_url: "https://pbs.twimg.com/profile_images/604384909562511360/AGOhSNfW_400x400.jpg", name: "Jolly")
-avatar6 = Avatar.create(img_url: "https://pbs.twimg.com/profile_images/598719979958206464/687Ze2ow_400x400.jpg", name: "Frisky")
+avatar6 = Avatar.create(img_url: "https://pbs.twimg.com/profile_images/739616522012897285/fxkTDAWe_400x400.jpg", name: "Ratty")
 avatar7 = Avatar.create(img_url: "https://at-cdn-s01.audiotool.com/2012/08/21/documents/hwGMHRNPd4A8ve0FIorQSWbJJhkM3/0/cover256x256-6f5d6d74d81044498651d87f32cadd7d.jpg", name: "Fat")
 avatar8 = Avatar.create(img_url: "https://pbs.twimg.com/profile_images/598719979958206464/687Ze2ow_400x400.jpg", name: "Musical")
 avatar9 = Avatar.create(img_url: "https://rlv.zcache.com/4th_of_july_patriotic_squirrel_stickers-re8268f1ba65d4257b58f76ecd9fca466_v9wf3_8byvr_307.jpg?rvtype=content", name: "Tricky")
