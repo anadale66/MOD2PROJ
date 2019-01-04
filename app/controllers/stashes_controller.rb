@@ -41,7 +41,7 @@ class StashesController < ApplicationController
 private 
 
   def stash_params
-	  params.require(:stash).permit(:name, :squirrel_id, :snack_id) 
+	  params.require(:stash).permit(:name, :squirrel_id, :snack_id, :img_url) 
   end
 
 
