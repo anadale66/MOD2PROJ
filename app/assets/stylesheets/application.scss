@@ -38,6 +38,9 @@ body {
    padding: 40px;
 }
 
+img {
+    max-width: 256px;
+}
 a {
 
 }
@@ -53,4 +56,9 @@ label {
 .back-link {
     display: block;
     margin-top: 20px;
+}
+
+.nav-bold {
+    font-weight: bold;
+
 }

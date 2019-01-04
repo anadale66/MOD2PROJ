@@ -1,4 +1,5 @@
 class StashesController < ApplicationController
+  before_action :authenticate_user!
   def index
     @stashes = Stash.all 
   end

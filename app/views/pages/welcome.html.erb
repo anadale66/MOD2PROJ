@@ -2,8 +2,12 @@
 <h4>🌈 Where your squirrel dreams come true</h4>
 
 
+<% if current_user.present? %>
+    <%= button_to "Check out the squirrels", squirrels_path, method: :get %>
+<%else%>
+    <%= button_to "Login", squirrels_path, method: :get %>
+<% end %> 
 
-<%= button_to "Login", squirrels_path, method: :get %>
 
 
 
